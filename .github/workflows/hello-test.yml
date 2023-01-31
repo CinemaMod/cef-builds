@@ -1,7 +1,0 @@
-name: Hello test
-on: [push]
-jobs:
-  hello-test-1:
-    runs-on: [self-hosted, macOS, X64]
-    steps:
-      - run: echo hello test
