@@ -1,0 +1,7 @@
+name: Hello test
+on: [push]
+jobs:
+  hello-test-1:
+    runs-on: cef-macos-12
+    steps:
+      - run: echo hello test
