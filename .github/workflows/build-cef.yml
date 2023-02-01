@@ -1,6 +1,6 @@
 name: Build CEF
 
-on: [push]
+on: [push, workflow_dispatch]
 
 env:
   GN_DEFINES: is_official_build=true
