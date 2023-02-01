@@ -11,4 +11,4 @@ jobs:
     runs-on: [self-hosted, macOS, X64]
     steps:
       - run: curl https://bitbucket.org/chromiumembedded/cef/raw/master/tools/automate/automate-git.py -o automate-git.py
-      - run: python3 automate-git.py --download-dir=~/cef-builds --branch=4896 --minimal-distrib --client-distrib --force-clean --x64-build --with-pgo-profiles
+      - run: python3 automate-git.py --download-dir=cef-download --branch=4896 --minimal-distrib --client-distrib --force-clean --x64-build --with-pgo-profiles
