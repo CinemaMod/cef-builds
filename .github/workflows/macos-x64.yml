@@ -1,4 +1,4 @@
-name: Build CEF
+name: Build CEF for macOS x64
 
 on: [push, workflow_dispatch]
 
@@ -7,7 +7,7 @@ env:
   CEF_ARCHIVE_FORMAT: tar.bz2
 
 jobs:
-  cef-macos:
+  cef-macos-x64:
     runs-on: [self-hosted, macOS, X64]
     steps:
       - run: curl https://bitbucket.org/chromiumembedded/cef/raw/master/tools/automate/automate-git.py -o automate-git.py
