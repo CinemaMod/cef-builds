@@ -7,7 +7,7 @@ env:
   CEF_ARCHIVE_FORMAT: tar.bz2
 
 jobs:
-  cef-macos-x64:
+  cef-windows-x64:
     runs-on: [self-hosted, Windows, X64]
     steps:
       - name: Display the environment variables and their values
