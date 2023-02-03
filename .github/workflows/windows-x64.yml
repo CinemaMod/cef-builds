@@ -13,4 +13,3 @@ jobs:
       - run: |
           curl https://bitbucket.org/chromiumembedded/cef/raw/master/tools/automate/automate-git.py -o automate-git.py
           python3 automate-git.py --download-dir=cef-download --branch=4896 --minimal-distrib --client-distrib --force-clean --x64-build --with-pgo-profiles --no-debug-build
-        shell: cmd
