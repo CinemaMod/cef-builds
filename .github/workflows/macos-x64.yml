@@ -1,5 +1,7 @@
 name: Build CEF for macOS x64
 
+# --force-clean
+
 on: [workflow_dispatch]
 
 env:
@@ -12,4 +14,5 @@ jobs:
     steps:
       - run: |
           curl https://bitbucket.org/chromiumembedded/cef/raw/master/tools/automate/automate-git.py -o automate-git.py
-          python3 automate-git.py --download-dir=cef-download --branch=4896 --minimal-distrib --client-distrib --force-clean --x64-build --with-pgo-profiles --no-debug-build
+          python3 automate-git.py --download-dir=/Users/cef/cef --branch=4896 --minimal-distrib --client-distrib --x64-build --with-pgo-profiles --no-debug-build
+          s3cmd sync /Users/cef/cef/chromium/src/cef/binary_distrib/ --exclude "*" --include "*.tar.bz2" s3://cef-builds/4896/
