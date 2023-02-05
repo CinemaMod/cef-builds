@@ -1,4 +1,4 @@
-name: Build CEF for macOS arm64
+name: Build CEF 4896 for macOS arm64
 
 # --force-clean
 
