@@ -11,6 +11,7 @@ env:
 jobs:
   cef-macos-x64:
     runs-on: [self-hosted, macOS, X64]
+    timeout-minutes: 720
     steps:
       - run: |
           curl https://bitbucket.org/chromiumembedded/cef/raw/master/tools/automate/automate-git.py -o automate-git.py
