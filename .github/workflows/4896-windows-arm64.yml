@@ -11,7 +11,7 @@ env:
   CEF_ENABLE_ARM64: 1
 
 jobs:
-  cef-windows-x64:
+  cef-windows-arm64:
     runs-on: [self-hosted, Windows, X64]
     steps:
       - shell: cmd
