@@ -13,6 +13,7 @@ env:
 jobs:
   cef-windows-arm64:
     runs-on: [self-hosted, Windows, X64]
+    timeout-minutes: 720
     steps:
       - shell: cmd
         run: |
