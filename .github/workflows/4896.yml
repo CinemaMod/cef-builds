@@ -11,6 +11,7 @@ jobs:
       GYP_MSVS_VERSION: 2019
     concurrency:
       group: macmini
+      cancel-in-progress: false
     timeout-minutes: 7200
     steps:
       - shell: cmd
@@ -26,6 +27,7 @@ jobs:
       GYP_MSVS_VERSION: 2019
     concurrency:
       group: macmini
+      cancel-in-progress: false
     timeout-minutes: 7200
     steps:
       - shell: cmd
@@ -42,6 +44,7 @@ jobs:
       CEF_ENABLE_ARM64: 1
     concurrency:
       group: macmini
+      cancel-in-progress: false
     timeout-minutes: 7200
     steps:
       - shell: cmd
@@ -56,6 +59,7 @@ jobs:
       CEF_ARCHIVE_FORMAT: tar.bz2
     concurrency:
       group: macmini
+      cancel-in-progress: false
     timeout-minutes: 7200
     steps:
       - run: |
@@ -70,6 +74,7 @@ jobs:
       CEF_ENABLE_ARM64: 1
     concurrency:
       group: macmini
+      cancel-in-progress: false
     timeout-minutes: 7200
     steps:
       - run: |
@@ -83,6 +88,7 @@ jobs:
       CEF_ARCHIVE_FORMAT: tar.bz2
     concurrency:
       group: macmini
+      cancel-in-progress: false
     timeout-minutes: 7200
     steps:
       - run: |
@@ -97,6 +103,7 @@ jobs:
       CEF_INSTALL_SYSROOT: arm64
     concurrency:
       group: macmini
+      cancel-in-progress: false
     timeout-minutes: 7200
     steps:
       - run: |
@@ -111,6 +118,7 @@ jobs:
       CEF_INSTALL_SYSROOT: arm
     concurrency:
       group: macmini
+      cancel-in-progress: false
     timeout-minutes: 7200
     steps:
       - run: |
