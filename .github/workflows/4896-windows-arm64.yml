@@ -1,7 +1,5 @@
 name: Build CEF 4896 for Windows arm64
 
-# --force-clean
-
 on: [workflow_dispatch]
 
 env:
@@ -18,5 +16,13 @@ jobs:
       - shell: cmd
         run: |
           curl https://bitbucket.org/chromiumembedded/cef/raw/master/tools/automate/automate-git.py -o automate-git.py
-          python automate-git.py --download-dir=C:\cef --force-clean --branch=4896 --minimal-distrib --client-distrib --build-target=cefsimple --arm64-build --with-pgo-profiles --no-debug-build
+          python automate-git.py \
+            --download-dir=C:\cef \
+            --force-clean \
+            --branch=4896 \
+            --minimal-distrib \
+            --client-distrib \
+            --arm64-build \
+            --no-debug-build \
+            --build-target=cefsimple
           python C:\s3cmd-2.3.0\s3cmd sync C:\cef\chromium\src\cef\binary_distrib\ --exclude "*" --include "*.tar.bz2" s3://cef-builds/4896/
