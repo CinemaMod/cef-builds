@@ -8,7 +8,7 @@ env:
   CEF_INSTALL_SYSROOT: arm64
 
 jobs:
-  cef-linux-arm:
+  cef-linux-arm64:
     runs-on: [self-hosted, Linux, X64]
     timeout-minutes: 720
     steps:
